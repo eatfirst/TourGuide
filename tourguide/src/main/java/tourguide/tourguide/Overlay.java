@@ -13,6 +13,7 @@ public class Overlay {
     public Style mStyle;
     public Animation mEnterAnimation, mExitAnimation;
     public View.OnClickListener mOnClickListener;
+    public int mPaddingScaleFactor;
 
     public enum Style {
         Circle, Rectangle
@@ -78,6 +79,16 @@ public class Overlay {
      */
     public Overlay setOnClickListener(View.OnClickListener onClickListener){
         mOnClickListener=onClickListener;
+        return this;
+    }
+
+    /**
+     * Set the scale factor for the ViewHole view that shows the 'playOn' view
+     * @param paddingScaleFactor
+     * @return return Overlay instance for chaining purpose
+     */
+    public Overlay setPaddingScaleFactor(int paddingScaleFactor) {
+        mPaddingScaleFactor = paddingScaleFactor;
         return this;
     }
 }
