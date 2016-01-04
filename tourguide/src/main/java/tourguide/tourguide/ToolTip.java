@@ -20,8 +20,8 @@ public class ToolTip {
     public View.OnClickListener mOnClickListener;
     public Typeface mTitleTypeface;
     public Typeface mDescriptionTypeface;
-    public int mTitleTextSize;
-    public int mDescriptionTextSize;
+    public float mTitleTextSize;
+    public float mDescriptionTextSize;
 
     public ToolTip(){
         /* default values */
@@ -142,7 +142,7 @@ public class ToolTip {
    * @param titleTextSize
    * @return return ToolTip instance for chaining purpose
    */
-    public ToolTip setTitleFontSize(int titleTextSize) {
+    public ToolTip setTitleFontSize(float titleTextSize) {
         mTitleTextSize = titleTextSize;
         return this;
     }
@@ -152,7 +152,7 @@ public class ToolTip {
    * @param descriptionTextSize
    * @return return ToolTip instance for chaining purpose
    */
-    public ToolTip setDescriptionFontSize(int descriptionTextSize) {
+    public ToolTip setDescriptionFontSize(float descriptionTextSize) {
         mDescriptionTextSize = descriptionTextSize;
         return this;
     }
