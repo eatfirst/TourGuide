@@ -288,11 +288,15 @@ public class TourGuide {
                 toolTipTitleTV.setVisibility(View.GONE);
             } else {
                 toolTipTitleTV.setText(mToolTip.mTitle);
+                toolTipTitleTV.setTypeface(mToolTip.mTitleTypeface);
+                toolTipTitleTV.setTextSize(mToolTip.mTitleTextSize);
             }
             if (mToolTip.mDescription == null){
                 toolTipDescriptionTV.setVisibility(View.GONE);
             } else {
                 toolTipDescriptionTV.setText(mToolTip.mDescription);
+                toolTipDescriptionTV.setTypeface(mToolTip.mDescriptionTypeface);
+              toolTipDescriptionTV.setTextSize(mToolTip.mDescriptionTextSize);
             }
 
 
