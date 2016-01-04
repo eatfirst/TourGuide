@@ -1,6 +1,7 @@
 package tourguide.tourguide;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -17,6 +18,10 @@ public class ToolTip {
     public boolean mShadow;
     public int mGravity;
     public View.OnClickListener mOnClickListener;
+    public Typeface mTitleTypeface;
+    public Typeface mDescriptionTypeface;
+    public int mTitleTextSize;
+    public int mDescriptionTextSize;
 
     public ToolTip(){
         /* default values */
@@ -109,6 +114,46 @@ public class ToolTip {
      */
     public ToolTip setShadow(boolean shadow){
         mShadow = shadow;
+        return this;
+    }
+
+  /**
+   * Set the typeface for the Title TextView
+   * @param titleTtypeface
+   * @return return ToolTip instance for chaining purpose
+   */
+    public ToolTip setTitleTypeface(Typeface titleTtypeface) {
+        mTitleTypeface = titleTtypeface;
+        return this;
+    }
+
+    /**
+     * Set the typeface for the Description TextView
+     * @param descriptionTypeface
+     * @return return ToolTip instance for chaining purpose
+     */
+    public ToolTip setDescriptionTypeface(Typeface descriptionTypeface) {
+        mDescriptionTypeface = descriptionTypeface;
+        return this;
+    }
+
+  /**
+   * Set the text size for the Title TextView
+   * @param titleTextSize
+   * @return return ToolTip instance for chaining purpose
+   */
+    public ToolTip setTitleFontSize(int titleTextSize) {
+        mTitleTextSize = titleTextSize;
+        return this;
+    }
+
+  /**
+   * Set the text size for the Description TextView
+   * @param descriptionTextSize
+   * @return return ToolTip instance for chaining purpose
+   */
+    public ToolTip setDescriptionFontSize(int descriptionTextSize) {
+        mDescriptionTextSize = descriptionTextSize;
         return this;
     }
 
